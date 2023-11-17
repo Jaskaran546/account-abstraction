@@ -54,14 +54,18 @@ const config: HardhatUserConfig = {
     localgeth: { url: 'http://localgeth:8545' },
     goerli: getNetwork('goerli'),
     sepolia: getNetwork('sepolia'),
-    proxy: getNetwork1('http://localhost:8545')
+    proxy: getNetwork1('http://localhost:8545'),
+    mumbaitest: {
+      url: `https://rpc-mumbai.maticvigil.com`,
+      accounts:[`f3d1aaea7abad660f00d3e5f39d0680e37196b7f794cafc335f29bd62406838f`],
+    },
   },
   mocha: {
     timeout: 10000
   },
   // @ts-ignore
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY
+    apiKey: 'U4H69A9Z3FE2BVJKRVAYYGZA8PF75FUKZ9'
   }
 
 }
